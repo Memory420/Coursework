@@ -24,7 +24,7 @@ public class BusPark {
         currentBusCount = MAX_BUSES;
         buses = new Bus[MAX_BUSES];
         for (int i = 0; i < MAX_BUSES; i++) {
-            buses[i] = new Bus(i + 1); // Создаёт автобусы с идентификаторами от 1 до MAX_BUSES
+            buses[i] = new Bus(i + 1);
         }
     }
 

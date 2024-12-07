@@ -1,8 +1,6 @@
 package com.memory.Service;
 
 import com.memory.Entity.Driver;
-import com.memory.Utils.DriverType;
-import com.memory.Utils.Route;
 
 /**
  * Класс {@code DriverManager} управляет водителями, их количеством и инициализацией.
@@ -21,7 +19,7 @@ public class DriverManager {
         drivers = new Driver[DRIVER_NAMES.length];
 
         for (int i = 0; i < DRIVER_NAMES.length; i++) {
-            drivers[i] = new Driver(DRIVER_NAMES[i], DriverType.A, new Route());
+            drivers[i] = new Driver(DRIVER_NAMES[i]);
         }
     }
 

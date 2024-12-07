@@ -8,28 +8,22 @@ public class Driver {
     private boolean hasShiftEnded;
     private DriverType driverType;
     private Route route;
+    private int workedMins;
+    private int lastBreakTime;
 
 
-    public Driver(String driverName, DriverType driverType, Route route) {
+    public Driver(String driverName) {
         this.name = driverName;
-        this.driverType = driverType;
-
     }
     public String getName() {
         return name;
     }
-    private static final String[] DRIVER_NAMES = {
-            "Алексей",
-            "Дмитрий",
-            "Екатерина",
-            "Марина",
-            "Сергей",
-            "Али",
-            "Джамал",
-            "Надежда"
-    };
-    private Route generateRoute(int timeIntervalIndex) {// управление сигнатурой в твоём распоряжении
-        // todo реализовать подачу случайного расписания согласно условию
-        return generatedRoute;
+
+    public void setDriverType(DriverType driverType) {
+        this.driverType = driverType;
+    }
+
+    private void generateRoute(int startWorkTime) {
+
     }
 }
