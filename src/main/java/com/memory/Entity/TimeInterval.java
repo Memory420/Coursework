@@ -75,4 +75,7 @@ public class TimeInterval {
         return String.format("%02d:%02d", hours, mins);
     }
 
+    public TimeIntervalState getState() {
+        return state;
+    }
 }

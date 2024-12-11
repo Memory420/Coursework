@@ -26,6 +26,10 @@ public class Bus {
         this.id = id;
     }
 
+    public void setOnRoute(boolean onRoute) {
+        this.onRoute = onRoute;
+    }
+
     /**
      * Конструктор для создания автобуса с назначенным водителем.
      *
@@ -49,5 +53,9 @@ public class Bus {
             this.onRoute = false;
             return String.format("Bus [id=%d, driver=не назначен, onRoute=%b]", id, false);
         }
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
     }
 }
