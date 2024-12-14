@@ -17,7 +17,6 @@ public class BusScheduling {
      * выводит статистику и детализированные назначения, а также считает конфликты.
      */
     public static void main(String[] args) {
-        // Инициализация данных
         List<Bus> buses = initializeBuses(8);
         List<Driver> drivers = initializeDrivers();
         List<Route> routes = initializeRoutes();
@@ -35,7 +34,6 @@ public class BusScheduling {
         Schedule geneticSchedule = geneticScheduler.createSchedule();
         long endGenetic = System.currentTimeMillis();
 
-        // Вывод статистики
         System.out.println("Жадный алгоритм:");
         System.out.println("Время выполнения: " + (endGreedy - startGreedy) + " мс");
         System.out.println("Количество назначенных маршрутов: " + greedySchedule.getAssignments().size());
@@ -221,9 +219,9 @@ public class BusScheduling {
      */
     private static void printAssignments(String algorithmName, Schedule schedule) {
         System.out.println("\nДетализированные назначения " + algorithmName + ":");
+
         for (Assignment a : schedule.getAssignments()) {
-            System.out.println("Маршрут " + a.getRoute().getId() +
-                    " назначен автобусу " + a.getBus().getId() +
+            System.out.println("Маршрут" + " назначен автобусу " + a.getBus().getId() +
                     ", водителю " + a.getDriver().getId() +
                     " с " + a.getTimeSlot().getStartTime() +
                     " до " + a.getTimeSlot().getEndTime() +

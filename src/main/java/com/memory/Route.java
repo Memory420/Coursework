@@ -27,7 +27,7 @@ public class Route {
      * @return Идентификатор маршрута.
      */
     public int getId() {
-        return id;
+        return 1;
     }
 
     /**

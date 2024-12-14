@@ -23,7 +23,13 @@ public class Schedule {
      * @return Список назначений.
      */
     public List<Assignment> getAssignments() {
-        return assignments;
+        List<Assignment> assigments = new ArrayList<>();
+        for (Assignment assignment : assignments) {
+            if (assignment.getRoute().getId() == 1){
+                assigments.add(assignment);
+            }
+        }
+        return assigments;
     }
 
     /**
